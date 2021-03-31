@@ -335,4 +335,4 @@ disconnected
 ![image](https://github.com/Mountains-and-rivers/https-mutual-authentication/blob/main/images/3.png)
 1，同一根证书签发  
 2，不同根证书签发信任链  
-3, xxxxx  
+3, 二级签发与ca签发
