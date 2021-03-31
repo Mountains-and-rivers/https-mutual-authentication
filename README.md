@@ -167,8 +167,10 @@ openssl x509 -req -days 365 -sha1 -extensions v3_req -CA certs/ca.cer -CAkey pri
 
 注意：这里指定的-extensions的值为v3_req，在OpenSSL的配置中，v3_req配置的basicConstraints的值为CA:FALSE，如图：
 ![image](https://github.com/Mountains-and-rivers/https-mutual-authentication/blob/main/images/1.png)  
-而前面生成根证书时，使用的-extensions值为v3_ca，v3_ca中指定的basicConstraints的值为CA:TRUE，表示该证书是颁发给CA机构的证书，如图：
+而前面生成根证书时，使用的-extensions值为v3_ca，v3_ca中指定的basicConstraints的值为CA:TRUE，表示该证书是颁发给CA机构的证书，如图： 
+
 ![image](https://github.com/Mountains-and-rivers/https-mutual-authentication/blob/main/images/2.png)
+
 在x509指令中，有多种方式可以指定一个将要生成证书的序列号，可以使用set_serial选项来直接指定证书的序列号，也可以使用-CAserial选项来指定一个包含序列号的文件。所谓的序列号是一个包含一个十六进制正整数的文件，在默认情况下，该文件的名称为输入的证书名称加上.srl后缀，比如输入的证书文件为ca.cer，那么指令会试图从ca.srl文件中获取序列号，可以自己创建一个ca.srl文件，也可以通过-CAcreateserial选项来生成一个序列号文件。
 
 ## **用根证书签发client端证书**
