@@ -166,7 +166,9 @@ openssl x509 -req -days 365 -sha1 -extensions v3_req -CA certs/ca.cer -CAkey pri
 -CAcreateserial——表示创建证书序列号文件(即上方提到的serial文件)，创建的序列号文件默认名称为-CA，指定的证书名称后加上.srl后缀
 
 注意：这里指定的-extensions的值为v3_req，在OpenSSL的配置中，v3_req配置的basicConstraints的值为CA:FALSE，如图：
+
 ![image](https://github.com/Mountains-and-rivers/https-mutual-authentication/blob/main/images/1.png)  
+
 而前面生成根证书时，使用的-extensions值为v3_ca，v3_ca中指定的basicConstraints的值为CA:TRUE，表示该证书是颁发给CA机构的证书，如图： 
 
 ![image](https://github.com/Mountains-and-rivers/https-mutual-authentication/blob/main/images/2.png)
