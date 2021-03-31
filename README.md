@@ -239,7 +239,7 @@ private/server-key.pem -in certs/server.cer -out certs/server.keystore
 **c).信任证书的导出**
 
 ```
-keytool -importcert -trustcacerts -alias localhost \
+keytool -importcert -trustcacerts -alias truststore \
 -file certs/ca.cer -keystore certs/ca-trust.keystore
 ```
 
