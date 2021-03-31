@@ -333,3 +333,6 @@ disconnected
 
 ### TODO：nginx 转发双向认证配置
 ![image](https://github.com/Mountains-and-rivers/https-mutual-authentication/blob/main/images/3.png)
+1，同一根证书签发
+2，不同根证书签发信任链
+3,xxxxx
