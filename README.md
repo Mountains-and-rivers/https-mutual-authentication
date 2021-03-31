@@ -199,12 +199,7 @@ openssl x509 -req -days 365 -sha1 -extensions v3_req -CA certs/ca.cer -CAkey pri
 
  
 
-至此，我们已经使用OpenSSL自签发了一个CA证书ca.cer，并用这个CA证书签发了server.cer和client.cer两个子证书了：
-
-![img](http://static.oschina.net/uploads/space/2016/0401/153323_S39o_1434710.png)
-
-
-
+至此，我们已经使用OpenSSL自签发了一个CA证书ca.cer，并用这个CA证书签发了server.cer和client.cer两个子证书了.
 ## **导出证书**
 
 **a).导出客户端证书**
@@ -333,4 +328,4 @@ disconnected
 ```
 
 ### TODO：nginx 转发双向认证配置
-![image](https://github.com/Mountains-and-rivers/https-mutual-authentication/blob/main/images/1.png)
+![image](https://github.com/Mountains-and-rivers/https-mutual-authentication/blob/main/images/3.png)
